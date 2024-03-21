@@ -4,6 +4,19 @@ import {getFilmes, getFilme, postFilme} from "./filmes.js"
 
 function criarCard (filme){
     const card = document.createElement('div')
+    card.classList.add(
+        'mt-5',
+        'w-80',
+        'h-96',
+        'col-start-3',
+        'text-ce',
+        'bg-white',
+        'px-5',
+        'rounded-xl'
+        
+    )
+
+
 
     const titulo = document.createElement('h2')
     titulo.textContent = filme.nome
@@ -11,8 +24,11 @@ function criarCard (filme){
     const texto = document.createElement('textarea')
     texto.textContent = filme.sinopse
 
+    
+
     const fotoCapa = document.createElement('img')
     fotoCapa.src = filme.foto_capa
+    fotoCapa.classList.add('w-80', 'h-72')
 
     card.append(fotoCapa)
     card.append(titulo)
@@ -22,7 +38,7 @@ function criarCard (filme){
 }
 
 async function preencherContainer (){
-    const container = document.querySelector('body')
+    const container = document.getElementById('container_filmes')
    
     const filmes = await getFilmes()
     console.log(filmes)

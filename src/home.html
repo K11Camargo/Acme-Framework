@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
-    <link href="./output.css" rel="stylesheet" />
+    <script src="../js/main.js" type="module" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet"/>
     <title>Home</title>
 </head>
-<body>
+<body class="inline-block h-screen w-full h-full bg-[#823EF2]">
 
-          <!--FUNDO E BOX DE CIMA-->
+          <!--BOX DE CIMA-->
 
-    <div class="flex h-screen min-h-full bg-[#823EF2]">
+          <header class="w-full">
         <div class="flex items-center bg-[#323232] h-32 w-full">
 
                   <!--PARTE DO LOGO-->
@@ -42,8 +44,24 @@
 
         <img src="../foto/user.png" alt="" class="m-10">
 
+        
+      </header>
 
+
+      <!--PARTE DOS CATALOGO-->
+
+      <main class="h-full w-full">
+        <div class="w-96 h-80">
+          <div id="container_filmes" class="flex w-full h-full space-x-6">
 
           </div>
+        </div>
+      </main>
+
+
+      
+
+
+
 </body>
 </html>
